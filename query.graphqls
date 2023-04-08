@@ -1,0 +1,32 @@
+mutation {
+    createUser(userRequest: {username: "bozgur", mail: "bozgur@mail.com", role: ADMIN}) {
+        id
+        username
+        role
+        created
+        updated
+    }
+}
+mutation {
+    createUser(userRequest: {username: "zozgur", mail: "zozgur@mail.com", role: USER}) {
+        id
+        username
+        role
+        created
+        updated
+    }
+}
+
+query {
+    getAllUsers{
+        id
+        username
+        role
+        created
+        updated
+    }
+}
+
+mutation {
+    deleteUser(id:6)
+}
