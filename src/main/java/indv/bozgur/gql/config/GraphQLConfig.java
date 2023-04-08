@@ -9,13 +9,8 @@ import org.springframework.graphql.execution.RuntimeWiringConfigurer;
 @Configuration
 public class GraphQLConfig {
 
-  @Bean
-  RuntimeWiringConfigurer runtimeWiringConfigurer() {
-    return new RuntimeWiringConfigurer() {
-      @Override
-      public void configure(Builder builder) {
-        builder.scalar(ExtendedScalars.DateTime);
-      }
-    };
-  }
+    @Bean
+    RuntimeWiringConfigurer runtimeWiringConfigurer() {
+        return builder -> builder.scalar(ExtendedScalars.DateTime);
+    }
 }

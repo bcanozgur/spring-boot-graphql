@@ -30,3 +30,29 @@ query {
 mutation {
     deleteUser(id:6)
 }
+
+query {
+    getUsersByRole(role: USER) {
+        id
+        created
+        updated
+        username
+        mail
+        role
+    }
+}
+
+query {
+    getUserByUsername(username: "bozgur") {
+        id
+        created
+        updated
+        username
+        mail
+        role
+    }
+}
+
+mutation {
+    deleteUsersByRole(role: ADMIN)
+}

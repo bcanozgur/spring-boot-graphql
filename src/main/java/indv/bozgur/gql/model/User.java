@@ -15,9 +15,9 @@ import lombok.NoArgsConstructor;
 @Entity(name = "`user`")
 public class User extends BaseEntity {
 
-  private String username;
-  private String mail;
+    private String username;
+    private String mail;
 
-  @Enumerated(EnumType.STRING)
-  private Role role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 }

@@ -3,12 +3,16 @@ scalar DateTime
 type Query {
     getAllUsers: [User]
     getUserById(id: ID!): User
+    getUserByUsername(username: String!): User
+    getUsersByRole(role: Role!): [User]
+
 }
 
 type Mutation{
     createUser(userRequest: UserRequest!) : User
     updateUser(userRequest: UserRequest!) : User
     deleteUser(id:ID!) : Boolean
+    deleteUsersByRole(role: Role!): Boolean
 }
 
 
